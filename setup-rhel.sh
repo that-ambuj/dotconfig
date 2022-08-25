@@ -33,8 +33,9 @@ exec zsh
 
 sudo dnf install vim
 
-echo ":imap jk <Esc>" > ~/.vimrc
-echo ":nmap ; :" > ~/.vimrc
+# Install VimPlug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Install Gnome Dock and it's dependencies
 sudo dnf install sassc
