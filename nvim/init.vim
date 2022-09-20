@@ -1,5 +1,4 @@
 imap jk <Esc>
-nmap ; :
 
 set nocompatible
 set nu

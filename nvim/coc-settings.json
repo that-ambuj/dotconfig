@@ -1,16 +1,15 @@
 {
     "coc.preferences.formatOnSaveFiletypes": ["*"],
-    "coc.preferences.formatOnType": true,
-    "typescript.format.semicolons": "remove",
-    "javascript.format.semicolons": "remove",
     "prettier.formatterPriority": 2,
     "prettier.enable": true,
     "prettier.arrowParens": "avoid",
-    "prettier.semi": false,
     "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
     "prettier.bracketSpacing": true,
     "suggest.preferCompleteThanJumpPlaceholder": true,
     "codeLens.enable": true,
-    "java.implementationsCodeLens.enabled": true
+    "java.implementationsCodeLens.enabled": true,
+    "go.goplsOptions": {
+        "completeUnimported": true
+    }
 }
