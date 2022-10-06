@@ -15,21 +15,19 @@ fi
 # Install NVM(Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
-# Add nvm to path
-if ($SHELL == "/bin/bash"); then
-	echo 'export nvm_dir="$home/.nvm" \n
-	[ -s "$nvm_dir/nvm.sh" ] && \. "$nvm_dir/nvm.sh" \n
-	[ -s "$nvm_dir/bash_completion" ] && \. "$nvm_dir/bash_completion" \n' > $HOME/.bashrc
-elif ($SHELL == "/bin/bash"); then
-	echo 'export nvm_dir="$home/.nvm" \n
-	[ -s "$nvm_dir/nvm.sh" ] && \. "$nvm_dir/nvm.sh" \n
-	[ -s "$nvm_dir/bash_completion" ] && \. "$nvm_dir/bash_completion" \n' > $HOME/.zshrc
-fi
+echo 'export nvm_dir="$home/.nvm"
+[ -s "$nvm_dir/nvm.sh" ] && \. "$nvm_dir/nvm.sh"
+[ -s "$nvm_dir/bash_completion" ] && \. "$nvm_dir/bash_completion"' > $HOME/.bashrc
 
-# Install node and enable yarn
+source $HOME/.bashrc
+
+echo '##########
+Restart the terminal and run:
+
 nvm install --lts
 nvm use --lts
 corepack enable
+##########'
 
 # Install COC-NVIM 
 # curl -sL install-node.vercel.app/lts | bash
